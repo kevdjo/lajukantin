@@ -1,14 +1,16 @@
-package com.example.lajukantin;
+package com.example.lajukantin.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class DashboardActivity extends AppCompatActivity {
+import com.example.lajukantin.R;
+
+public class CartActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.activity_cart);
     }
 }

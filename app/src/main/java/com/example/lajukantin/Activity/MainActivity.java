@@ -1,7 +1,7 @@
 package com.example.lajukantin.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-//import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -10,8 +10,8 @@ import android.widget.Toast;
 
 import com.bdtopcoder.smart_slider.SliderAdapter;
 import com.bdtopcoder.smart_slider.SliderItem;
-//import com.example.lajukantin.Adaptor.CategoryAdaptor;
-//import com.example.lajukantin.Domain.CategoryDomain;
+import com.example.lajukantin.Adaptor.CategoryAdaptor;
+import com.example.lajukantin.Domain.CategoryDomain;
 import com.example.lajukantin.R;
 
 import java.util.ArrayList;
@@ -42,20 +42,20 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Have A Great Day", Toast.LENGTH_SHORT).show();
         });
 
-//        recyclerViewCategory();
+        recyclerViewCategory();
     }
 
-//    private void recyclerViewCategory() {
-//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-//        recyclerViewCategoryList = findViewById(R.id.recyclerView2);
-//        recyclerViewCategoryList.setLayoutManager(linearLayoutManager);
-//
-//        ArrayList<CategoryDomain> category = new ArrayList<>();
-//        category.add(new CategoryDomain("Good Waffle", "waffle"));
-//        category.add(new CategoryDomain("Nara Kitchen", "nara"));
-//        category.add(new CategoryDomain("Rocky Rooster", "rocky"));
-//
-//        adapter = new CategoryAdaptor(category);
-//        recyclerViewCategoryList.setAdapter(adapter);
-//    }
+    private void recyclerViewCategory() {
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewCategoryList = findViewById(R.id.recyclerView2);
+        recyclerViewCategoryList.setLayoutManager(linearLayoutManager);
+
+        ArrayList<CategoryDomain> category = new ArrayList<>();
+        category.add(new CategoryDomain("Good Waffle", "waffle"));
+        category.add(new CategoryDomain("Nara Kitchen", "nara"));
+        category.add(new CategoryDomain("Rocky Rooster", "rocky"));
+
+        adapter = new CategoryAdaptor(category);
+        recyclerViewCategoryList.setAdapter(adapter);
+    }
 }

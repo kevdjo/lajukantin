@@ -15,7 +15,7 @@
         android:backgroundTint="@color/bluel"
         android:gravity="center"
         android:padding="0dp"
-        android:text="<"
+        android:text="b"
         android:textColor="@color/blueprimary"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"

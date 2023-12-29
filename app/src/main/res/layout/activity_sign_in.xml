@@ -56,7 +56,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/tvRegister"
+            android:id="@+id/signUpRedirectText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Register"
@@ -83,7 +83,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
         <EditText
-            android:id="@+id/etSinInEmail"
+            android:id="@+id/login_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -111,7 +111,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
         <EditText
-            android:id="@+id/etSinInPassword"
+            android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -120,7 +120,7 @@
             />
     </com.google.android.material.textfield.TextInputLayout>
     <TextView
-        android:id="@+id/tvForgotPassword"
+        android:id="@+id/forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tilPassword"
@@ -149,7 +149,7 @@
 <!--        app:layout_constraintTop_toBottomOf="@id/tvForgotPassword" />-->
 
     <Button
-        android:id="@+id/btnSignIn"
+        android:id="@+id/login_button"
         android:layout_width="280dp"
         android:layout_height="41dp"
         android:layout_marginStart="20dp"
@@ -161,9 +161,19 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvForgotPassword" />
+        app:layout_constraintTop_toBottomOf="@id/forgot_password" />
     <!--        android:textStyle="bold"-->
-
+<!--    <com.developer.gbuttons.GoogleSignInButton-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Sign in with Google"-->
+<!--        android:id="@+id/googleBtn"-->
+<!--        app:isDarkTheme = "true"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginStart="40dp"-->
+<!--        android:layout_marginEnd="40dp"-->
+<!--        android:padding="8dp"/>-->
 
 <!--    <TextView-->
 <!--        android:id="@+id/tvOr"-->

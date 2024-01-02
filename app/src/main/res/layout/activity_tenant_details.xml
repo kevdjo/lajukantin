@@ -4,51 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".TenantDetailsActivity"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/logobinus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:srcCompat="@drawable/binus"/>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="match_parent"
+    <Button
+        android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="32dp"
-        android:layout_below="@id/logobinus"
-        android:background="@drawable/search_background"
-        android:drawableStart="@android:drawable/ic_menu_search"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Search for Ibu Kantin"
-        android:inputType="text"
-        android:paddingStart="20dp"
-        android:textSize="15sp" />
+        android:onClick="onBackButtonClick"
+        android:background="@drawable/backbutton"/>
+
+</RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        app:srcCompat="@drawable/nara"
+        android:layout_width="430dp"
+        android:layout_height="220dp"
+        android:elevation="4dp"/>
 
     <TextView
-        android:id="@+id/header"
-        android:layout_width="match_parent"
+        android:id="@+id/nara_kitchen"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextText"
-        android:text="Tenants"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/header_background"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="50sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:text="Nara Kitchen"
         android:textStyle="bold"
+        android:textSize="26sp"
         />
+
+    <TextView
+        android:id="@+id/your_ultima"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="3dp"
+        android:gravity="top"
+        android:text="Your ultimate destination for all things rice! We pride ourselves on offering a diverse menu that features a wide variety of rice-based dishes from around the world. From fragrant and flavorful fried rice to comforting rice bowls, we have something to satisfy every rice lover's cravings." />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="410dp"
+        android:layout_height="240dp"
         android:id="@+id/recyclerview"/>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -159,5 +160,6 @@
 
         </com.google.android.material.bottomappbar.BottomAppBar>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
 </LinearLayout>

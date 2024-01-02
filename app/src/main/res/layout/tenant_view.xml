@@ -1,64 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_marginTop="0dp"
+    android:gravity="center_horizontal"
     xmlns:tools="http://schemas.android.com/tools">
-
-    <ImageView
-        android:id="@+id/logobinus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/binus"/>
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="32dp"
-        android:layout_below="@id/logobinus"
-        android:background="@drawable/search_background"
-        android:drawableStart="@android:drawable/ic_menu_search"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Search for Ibu Kantin"
-        android:inputType="text"
-        android:paddingStart="20dp"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logobinus" />
-
-    <TextView
-        android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextText"
-        android:layout_marginTop="15dp"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        tools:text="Tenants"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:background="@drawable/header_background"/>
 
     <ImageView
         android:id="@+id/imageview"
         android:layout_width="350dp"
         android:layout_height="200dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginRight="0dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:layout_below="@id/header"/>
 
@@ -83,7 +38,6 @@
         android:layout_below="@id/name"
         android:textColor="@color/black"
         tools:text="Rating"/>
-    <!--    android:layout_toEndOf="@id/imageview"-->
 
     <TextView
         android:layout_width="350dp"
@@ -95,10 +49,4 @@
         android:textColor="@color/black"
         tools:text="Category"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imageview"
-        android:layout_marginTop="10dp"/>
-
-</RelativeLayout>
+</LinearLayout>

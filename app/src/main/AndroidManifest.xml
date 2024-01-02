@@ -12,9 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lajukantin"
         tools:targetApi="31">
-<!--        <activity-->
-<!--            android:name=".Tenant"-->
-<!--            android:exported="false" />-->
+        <activity
+            android:name=".TenantDetailsActivity"
+            android:exported="false" />
+        <!-- <activity -->
+        <!-- android:name=".Tenant" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".MainActivity"
             android:exported="false" />

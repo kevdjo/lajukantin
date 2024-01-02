@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements RecyclerViewInterface {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +37,17 @@ public class MainActivity extends AppCompatActivity {
         tenantList.add(new Tenant("Rocky Rooster", "4.5", "Chicken", R.drawable.rocky));
         tenantList.add(new Tenant("Good Waffle", "4.7", "Snacks", R.drawable.waffle));
 
+//        TenantAdapter adapter = new TenantAdapter(this, Tenant, this)
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new TenantAdapter(getApplicationContext(), tenantList));
+        recyclerView.setAdapter(new TenantAdapter(getApplicationContext(), tenantList, this));
+    }
 
-
+    @Override
+    public void onItemClick(int position) {
+        Intent intent = new Intent(MainActivity.this, TenantDetailsActivity.class);
+        startActivity(intent);
 
     }
+
+
 }

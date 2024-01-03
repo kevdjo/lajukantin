@@ -19,7 +19,7 @@
         <!-- android:name=".Tenant" -->
         <!-- android:exported="false" /> -->
         <activity
-            android:name=".MainActivity"
+            android:name=".TenantActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"

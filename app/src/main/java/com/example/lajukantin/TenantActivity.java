@@ -6,17 +6,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements RecyclerViewInterface {
+public class TenantActivity extends AppCompatActivity implements RecyclerViewInterface {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_tenant);
 
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
 
@@ -44,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewInter
 
     @Override
     public void onItemClick(int position) {
-        Intent intent = new Intent(MainActivity.this, TenantDetailsActivity.class);
+        Intent intent = new Intent(TenantActivity.this, TenantDetailsActivity.class);
         startActivity(intent);
 
     }

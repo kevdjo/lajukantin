@@ -14,6 +14,12 @@
         android:theme="@style/Theme.Lajukantin"
         tools:targetApi="31">
         <activity
+            android:name=".TenantDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TenantActivity"
+            android:exported="false" />
+        <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity

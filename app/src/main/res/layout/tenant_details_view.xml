@@ -82,7 +82,7 @@
                             android:layout_centerVertical="true"
                             android:text="-"
                             android:onClick="onSubtractButtonClick"
-                            android:textSize="12sp" />
+                            android:textSize="200dp" />
 
                         <TextView
                             android:id="@+id/quantityTextView"
@@ -102,7 +102,7 @@
                             android:layout_centerVertical="true"
                             android:text="+"
                             android:onClick="onAddButtonClick"
-                            android:textSize="12sp" />
+                            android:textSize="200dp" />
 
 
                     </RelativeLayout>

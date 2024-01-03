@@ -27,7 +27,7 @@ public class UpcomingOrderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_upcoming_order);
 
         List<OrderModel> upcomingModelList = new ArrayList<>();
-        upcomingModelList.add(new OrderModel(R.drawable.koffielogik_logo, "#254100", "Koffielogik", "2 Items", "5 Minutes"));
+        upcomingModelList.add(new OrderModel(R.drawable.koffielogik_logo, "#223100", "Koffielogik", "2 Items", "5 Minutes"));
         upcomingModelList.add(new OrderModel(R.drawable.nara_logo, "#254100", "Nara Kitchen", "1 Items", "Ready"));
 
         rvMyUpcoming = findViewById(R.id.rv_upcoming);

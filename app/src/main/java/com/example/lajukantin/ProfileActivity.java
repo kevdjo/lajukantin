@@ -1,4 +1,4 @@
-package com.example.lajukantin.Activity;
+package com.example.lajukantin;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -10,10 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-
-import com.example.lajukantin.ProfileFragment1;
-import com.example.lajukantin.ProfileFragment2;
-import com.example.lajukantin.R;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -56,7 +52,7 @@ public class ProfileActivity extends AppCompatActivity {
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ProfileActivity.this, MainActivity.class));
+                startActivity(new Intent(ProfileActivity.this, HomeActivity.class));
             }
         });
         profileBtn.setOnClickListener(new View.OnClickListener() {

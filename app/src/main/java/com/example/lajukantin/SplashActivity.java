@@ -1,12 +1,10 @@
-package com.example.lajukantin.Activity;
+package com.example.lajukantin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-
-import com.example.lajukantin.R;
 
 public class SplashActivity extends AppCompatActivity {
 

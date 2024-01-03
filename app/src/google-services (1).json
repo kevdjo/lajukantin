@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "466629958289",
+    "project_id": "lajukantin-bd2cd",
+    "storage_bucket": "lajukantin-bd2cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466629958289:android:629270a75fc1d18586bd30",
+        "android_client_info": {
+          "package_name": "com.example.lajukantin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKYHPlVBTmKKIw4hk19dXTtWB3MWe9SlU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class TenantDetailsActivity extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new FoodMenuAdapter(getApplicationContext(), foodItemList));
-
+        bottomNavigation();
     }
 
     public void onBackButtonClick(View view) {
@@ -43,7 +44,31 @@ public class TenantDetailsActivity extends AppCompatActivity {
     }
 
 
+    private void bottomNavigation() {
+        LinearLayout homeBtn = findViewById(R.id.homeBtn);
+        LinearLayout profileBtn = findViewById(R.id.profileBtn);
+        LinearLayout resBtn = findViewById(R.id.resBtn);
 
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TenantDetailsActivity.this, HomeActivity.class));
+            }
+        });
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TenantDetailsActivity.this, ProfileActivity.class));
+            }
+        });
+        resBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TenantDetailsActivity.this, TenantActivity.class));
+            }
+        });
+
+    }
 
 
 

@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +41,7 @@ public class TenantActivity extends AppCompatActivity implements RecyclerViewInt
 //        TenantAdapter adapter = new TenantAdapter(this, Tenant, this)
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new TenantAdapter(getApplicationContext(), tenantList, this));
+        bottomNavigation();
     }
 
     @Override
@@ -46,6 +49,30 @@ public class TenantActivity extends AppCompatActivity implements RecyclerViewInt
         Intent intent = new Intent(TenantActivity.this, TenantDetailsActivity.class);
         startActivity(intent);
 
+    }
+    private void bottomNavigation() {
+        LinearLayout homeBtn = findViewById(R.id.homeBtn);
+        LinearLayout profileBtn = findViewById(R.id.profileBtn);
+        LinearLayout resBtn = findViewById(R.id.resBtn);
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TenantActivity.this, HomeActivity.class));
+            }
+        });
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TenantActivity.this, ProfileActivity.class));
+            }
+        });
+        resBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TenantActivity.this, TenantActivity.class));
+            }
+        });
     }
 
 

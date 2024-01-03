@@ -49,6 +49,8 @@ public class ProfileActivity extends AppCompatActivity {
         LinearLayout homeBtn = findViewById(R.id.homeBtn);
         LinearLayout profileBtn = findViewById(R.id.profileBtn);
         LinearLayout resBtn = findViewById(R.id.resBtn);
+        LinearLayout cartBtn = findViewById(R.id.cartBtn);
+        LinearLayout orderBtn = findViewById(R.id.orderBtn);
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +70,17 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(new Intent(ProfileActivity.this, TenantActivity.class));
             }
         });
-
+        cartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProfileActivity.this, CartActivity.class));
+            }
+        });
+        orderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProfileActivity.this, UpcomingOrderActivity.class));
+            }
+        });
     }
 }

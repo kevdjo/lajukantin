@@ -8,8 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -51,6 +54,8 @@ public class PaymentActivity extends AppCompatActivity implements PaymentViewInt
         ivCheckStatus = findViewById(R.id.iv_checkStatus);
         txtPaymentStatus = findViewById(R.id.txt_paymentStatus);
         paymentStatus = false;
+
+        bottomNavigation();
     }
 
     @Override
@@ -89,5 +94,42 @@ public class PaymentActivity extends AppCompatActivity implements PaymentViewInt
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+    private void bottomNavigation() {
+        LinearLayout homeBtn = findViewById(R.id.homeBtn);
+        LinearLayout profileBtn = findViewById(R.id.profileBtn);
+        LinearLayout resBtn = findViewById(R.id.resBtn);
+        LinearLayout cartBtn = findViewById(R.id.cartBtn);
+        LinearLayout orderBtn = findViewById(R.id.orderBtn);
 
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PaymentActivity.this, HomeActivity.class));
+            }
+        });
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PaymentActivity.this, ProfileActivity.class));
+            }
+        });
+        resBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PaymentActivity.this, TenantActivity.class));
+            }
+        });
+        cartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PaymentActivity.this, CartActivity.class));
+            }
+        });
+        orderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PaymentActivity.this, UpcomingOrderActivity.class));
+            }
+        });
+    }
 }

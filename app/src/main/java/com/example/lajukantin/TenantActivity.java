@@ -54,6 +54,8 @@ public class TenantActivity extends AppCompatActivity implements RecyclerViewInt
         LinearLayout homeBtn = findViewById(R.id.homeBtn);
         LinearLayout profileBtn = findViewById(R.id.profileBtn);
         LinearLayout resBtn = findViewById(R.id.resBtn);
+        LinearLayout cartBtn = findViewById(R.id.cartBtn);
+        LinearLayout orderBtn = findViewById(R.id.orderBtn);
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +73,18 @@ public class TenantActivity extends AppCompatActivity implements RecyclerViewInt
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(TenantActivity.this, TenantActivity.class));
+            }
+        });
+        cartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TenantActivity.this, CartActivity.class));
+            }
+        });
+        orderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TenantActivity.this, UpcomingOrderActivity.class));
             }
         });
     }

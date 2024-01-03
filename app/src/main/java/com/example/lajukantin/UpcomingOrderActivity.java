@@ -5,7 +5,10 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import com.example.lajukantin.Adapter.CartAdapter;
 import com.example.lajukantin.Adapter.UpcomingAdapter;
@@ -36,5 +39,44 @@ public class UpcomingOrderActivity extends AppCompatActivity {
         rvMyUpcoming.setItemAnimator(new DefaultItemAnimator());
         rvMyUpcoming.setAdapter(upcomingAdapter);
 
+        bottomNavigation();
+    }
+    private void bottomNavigation() {
+        LinearLayout homeBtn = findViewById(R.id.homeBtn);
+        LinearLayout profileBtn = findViewById(R.id.profileBtn);
+        LinearLayout resBtn = findViewById(R.id.resBtn);
+        LinearLayout cartBtn = findViewById(R.id.cartBtn);
+        LinearLayout orderBtn = findViewById(R.id.orderBtn);
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UpcomingOrderActivity.this, HomeActivity.class));
+            }
+        });
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UpcomingOrderActivity.this, ProfileActivity.class));
+            }
+        });
+        resBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UpcomingOrderActivity.this, TenantActivity.class));
+            }
+        });
+        cartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UpcomingOrderActivity.this, CartActivity.class));
+            }
+        });
+        orderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UpcomingOrderActivity.this, UpcomingOrderActivity.class));
+            }
+        });
     }
 }
